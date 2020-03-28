@@ -8,21 +8,19 @@ router.get('/', function (req, res, next) {
 })
 
 function twilioMessage (text) {
-  return new MessagingResponse().message(text)
+  const message = new MessagingResponse().message(text)
+  return message
 }
 
 router.post('/', function (req, res) {
   const { body } = req
-  let message
+  console.log('twilio message', twilioMessage(messages.welcome))
   switch (body) {
     case 'hey':
-      twilioMessage(messages.welcome)
+      res.send(twilioMessage(messages.welcome).toString()).status(200)
       break
     default:
-      twilioMessage('Sorry, I didnt get that. Send 0 for Menu')
+      res.send(twilioMessage('Sorry, I didnt get that. Send 0 for Menu').toString()).status(200)
   }
-
-  res.set('Content-Type', 'text/xml')
-  res.send(message.toString()).status(200)
 })
 module.exports = router
