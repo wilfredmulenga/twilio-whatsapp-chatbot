@@ -14,7 +14,7 @@ function twilioMessage (text) {
 
 router.post('/', function (req, res) {
   const { body } = req
-  console.log('twilio message', twilioMessage(messages.welcome))
+  console.log('body', body)
   switch (body) {
     case 'hey':
       res.send(twilioMessage(messages.welcome).toString()).status(200)
