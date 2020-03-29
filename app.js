@@ -1,6 +1,7 @@
 require('dotenv').config()
 var createError = require('http-errors')
 var express = require('express')
+var session = require('express-session')
 var path = require('path')
 var cookieParser = require('cookie-parser')
 var logger = require('morgan')
@@ -29,6 +30,14 @@ app.use(function (req, res, next) {
   res.setHeader('Content-Type', 'text/xml')
   next()
 })
+
+app.set('trust proxy', 1) // trust first proxy
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: true, expiresIn: 100000 }
+}))
 
 app.use('/', indexRouter)
 app.use('/users', usersRouter)

@@ -26,11 +26,27 @@ async function getLatestNumbers () {
 
 router.post('/', async function (req, res) {
   const { Body } = req.body
+  const option = Body.toLowerCase()
+
+  if (req.session.option && req.session.option === 'f') {
+    if (option === 'a') {
+      res.send(twilioMessage(messages.FA).toString()).status(200)
+    }
+  }
+
+  req.session.option = option
+
   let latestNumbers
-  switch (Body) {
-    case '0':
+  switch (option) {
+    case 'corona':
     case 'hey':
       res.send(twilioMessage(messages.welcome).toString()).status(200)
+      break
+    case 'yes':
+      res.send(twilioMessage(messages.mainMenu).toString()).status(200)
+      break
+    case 'f':
+      res.send(twilioMessage(messages.F).toString()).status(200)
       break
     case '1':
       latestNumbers = await getLatestNumbers()
