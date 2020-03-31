@@ -12,6 +12,7 @@ router.post('/', async function (req, res) {
     case 'hey':
       res.send(twilioMessage(messages.welcome).toString()).status(200)
       break
+    case '0':
     case 'yes':
       res.send(twilioMessage(messages.mainMenu).toString()).status(200)
       break

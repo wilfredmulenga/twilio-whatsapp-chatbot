@@ -14,7 +14,7 @@ const mainMenu = 'Thank you. What would you like to learn?' + '\n' +
 '6 Myths about the virus' + '\n' +
 '7 Hot Lines' + '\n' +
 '8 Zambian Measures currently in place' + '\n\n' +
-'Reply with 1 to view this menu again'
+'Reply with 0 to view this menu again'
 
 const no = 'Thank you, you can always come back for more information by sending the word "Corona".' +
 ' Stay safe and have a nice day'
