@@ -161,6 +161,8 @@ const eightFour = '16. Authorities at all points of entry, including airports, h
 '1 to return to main menu' + '\n' +
 'and 0 to end'
 
+const sorry = 'Sorry, I didnt get that. Send 0 for Menu'
+
 module.exports = {
   welcome,
   mainMenu,
@@ -180,5 +182,6 @@ module.exports = {
   eightOne,
   eightTwo,
   eightThree,
-  eightFour
+  eightFour,
+  sorry
 }

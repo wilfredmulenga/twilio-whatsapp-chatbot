@@ -34,9 +34,10 @@ app.use(function (req, res, next) {
 app.set('trust proxy', 1) // trust first proxy
 app.use(session({
   secret: 'keyboard cat',
-  resave: false,
+  resave: true,
   saveUninitialized: true,
-  cookie: { secure: true, expiresIn: 100000 }
+  cookie: { secure: true, maxAge: 100000 },
+  option: ''
 }))
 
 app.use('/', indexRouter)
