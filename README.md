@@ -7,7 +7,7 @@ Then head over to [Twilio](https://www.twilio.com/) and sign up if you don't alr
 I would recommend trying out the [Twilio WhatsApp tutorial](https://www.twilio.com/console/sms/whatsapp/learn) to learn how to send and receive 
 messages.
 
-After that you can add the following environment variables to your repo:
+Make a copy of `.env.example` and rename it to `.env`. Then change the following environment variables in your new `.env` file:
 - TWILIO_ACCOUNT_SID
 - TWILIO_AUTH_TOKEN
 - TWILIO_NUMBER 
