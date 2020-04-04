@@ -15,7 +15,6 @@
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.2",
-    "pg": "^7.18.2",
     "twilio": "^3.41.1"
   },
   "devDependencies": {
