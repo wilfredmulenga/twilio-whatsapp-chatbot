@@ -40,6 +40,10 @@ router.post('/', async function (req, res) {
     case '8':
       res.send(twilioMessage(messages.eight).toString()).status(200)
       break
+    case '9':
+      const msg = await messages.nine()
+      res.send(twilioMessage(msg).toString()).status(200)
+      break
     default:
       res.send(twilioMessage(messages.sorry).toString()).status(200)
   }

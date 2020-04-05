@@ -9,10 +9,6 @@ var logger = require('morgan')
 var indexRouter = require('./routes/index')
 var usersRouter = require('./routes/users')
 
-const { pgClient } = require('./helpers/queries')
-
-pgClient.connect()
-
 var app = express()
 const port = process.env.PORT || 3000
 
