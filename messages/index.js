@@ -14,8 +14,8 @@ const mainMenu = 'Thank you. What would you like to learn?' + '\n' +
   '5 Protecting others from getting sick' + '\n' +
   '6 Myths about the virus' + '\n' +
   '7 Hot Lines' + '\n' +
-  '8 Zambian Measures currently in place' + '\n\n' +
-  '9 What are the numbers in Zambia' + '\n' +
+  '8 Zambian Measures currently in place' + '\n' +
+  '9 What are the numbers in Zambia' + '\n\n' +
   'Reply with 0 to view this menu again'
 
 const no = 'Thank you, you can always come back for more information by sending the word "Corona".' +
@@ -168,7 +168,9 @@ const nine = async () => {
   const { cases, todayCases, deaths, todaDeaths, recovered, active } = res.data
   const response = `The total number of cases in Zambia is ${cases}, of these ${recovered} have recovered and ${deaths} have died.` + '\n' +
     `Today there are ${todayCases} new case(s) and ${todaDeaths} new death(s)` + '\n' +
-    `There are ${active} active cases`
+    `There are ${active} active cases` + '\n\n' +
+    '1 to return to main menu' + '\n' +
+    'and 0 to end'
 
   return response
 }
