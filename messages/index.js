@@ -1,4 +1,4 @@
-import axios from 'axios'
+var axios = require('axios')
 
 const welcome = 'Hey there, Have you heard about Coronavirus? It is a new respiratory virus which is' +
   'spreading fast around the world. More than 540, 000 people are known to be infected and at least 24, 000 deaths' +
