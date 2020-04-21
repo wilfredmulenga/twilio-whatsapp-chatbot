@@ -165,7 +165,7 @@ const eightFour = '16. Authorities at all points of entry, including airports, h
 
 const nine = async () => {
   try {
-    const res = await axios.get('https://corona.lmao.ninja/countries/zambia')
+    const res = await axios.get('https://corona.lmao.ninja/v2/countries/zambia')
     const { cases, todayCases, deaths, todayDeaths, recovered, active } = res.data
     const response = `The total number of cases in Zambia is ${cases}, of these ${recovered} recovered and ${deaths} died.` + '\n' +
       `Today there are ${todayCases} new case(s) and ${todayDeaths} new death(s)` + '\n' +
